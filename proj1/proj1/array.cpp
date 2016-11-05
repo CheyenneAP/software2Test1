@@ -13,6 +13,7 @@ private:
 	string name, sname, idNum;
 
 public:
+
 	Test();
 	~Test();
 	void Test::writeTextFile(string);
@@ -20,7 +21,7 @@ public:
 	void Test::rTextFile(string);
 	void Test::createRec(int l, int array[], string);
 	void Test::create(int l, string array[], string,string);
-
+	
 };
 
 
@@ -90,6 +91,31 @@ void Test::create(int l, string array[], string n,string c ){
 		}
 
 	}
+}
+
+
+// create a sort function  to sort an array given the array  and the array size
+template <typename Tmpl8>
+void sortArr(Tmpl8 arr[], int arrSize){
+	int i, j;
+	Tmpl8 tempArr;
+	for (i = 0; i < arrSize - 1; i++){
+
+		for (j = i + 1; j < arrSize; j++){
+			// if array at position i is less than array at position i+1
+			if (arr[i] < arr[j]){
+
+
+				// swap the numbers to sort the array in descending order
+				tempArr = arr[j];
+				arr[j] = arr[i];
+				arr[i] = tempArr;
+			}
+
+		}
+
+	}
+
 }
 
 
