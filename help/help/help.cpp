@@ -64,7 +64,7 @@ void Test::readTextFile(string link){
 
 }
 
-void Test::rTextFile(string link){
+/*void Test::rTextFile(string link){
 	string STRING;
 
 	ifstream rFile;
@@ -79,14 +79,14 @@ void Test::rTextFile(string link){
 	rFile.close();
 }
 
-
+*/
 
 
 int main(){
 	Test t, r;
 	t.writeTextFile("Chey.txt");
 	//r.readTextFile("Chey.txt");
-
+	system("Pause");
 
 
 }
