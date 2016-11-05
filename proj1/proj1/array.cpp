@@ -20,7 +20,7 @@ public:
 	void Test::readTextFile(string);
 	void Test::rTextFile(string);
 	template <typename Tmp>
-	void Test::createRec(int l, Tmp array[], string);
+	 Test::createRec(int l, Tmp array[], string);
 	void Test::create(int l, string array[], string,string);
 
 	template <typename Tmpl8>
@@ -100,7 +100,7 @@ void Test:: sortArr(Tmpl8 arr[], int arrSize){
 
 		for (j = i + 1; j < arrSize; j++){
 			// if array at position i is less than array at position i+1
-			if (arr[i] < arr[j]){
+			if(arr[i] < arr[j]){
 
 
 				// swap the numbers to sort the array in descending order
@@ -108,7 +108,7 @@ void Test:: sortArr(Tmpl8 arr[], int arrSize){
 				arr[j] = arr[i];
 				arr[i] = tempArr;
 			}
-
+		
 		}
 
 	}
@@ -131,7 +131,7 @@ int main(){
 	Test t, r;
 	//t.writeTextFile("Chey.txt");
 	//r.readTextFile("Chey.txt");
-	system("Pause");
+
 
 
 }
