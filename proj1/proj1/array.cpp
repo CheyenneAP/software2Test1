@@ -19,9 +19,15 @@ public:
 	void Test::writeTextFile(string);
 	void Test::readTextFile(string);
 	void Test::rTextFile(string);
-	void Test::createRec(int l, int array[], string);
+	template <typename Tmp>
+	void Test::createRec(int l, Tmp array[], string);
 	void Test::create(int l, string array[], string,string);
+
+	template <typename Tmpl8>
+	void Test::sortArr(Tmpl8 arr[], int);
 	
+	template <typename T>
+	void disp(T arr[], int);
 };
 
 
@@ -68,7 +74,9 @@ void Test::readTextFile(string link){
 
 
 
-void Test::createRec(int l, int array[], string n){
+
+template <typename Tmp>
+void Test::createRec(int l, Tmp array[], string n){
 	cout << n << endl;
 	for (int i = 0; i < l; i++)
 	{
@@ -80,23 +88,12 @@ void Test::createRec(int l, int array[], string n){
 	}
 }
 
-void Test::create(int l, string array[], string n,string c ){
-	cout << n << endl;
-	for (int i = 0; i < l; i++)
-	{
-		while (array[i].compare(NULL)==0)
-		{
-			array[i] = c;
 
-		}
-
-	}
-}
 
 
 // create a sort function  to sort an array given the array  and the array size
 template <typename Tmpl8>
-void sortArr(Tmpl8 arr[], int arrSize){
+void Test:: sortArr(Tmpl8 arr[], int arrSize){
 	int i, j;
 	Tmpl8 tempArr;
 	for (i = 0; i < arrSize - 1; i++){
@@ -118,12 +115,21 @@ void sortArr(Tmpl8 arr[], int arrSize){
 
 }
 
+// new template to display
+template <typename T>
+void:: Test disp(T arr[], int size) {
+	for (int i = 0; i < size; i++){
+		cout << arr[i] << endl;
+
+	}
+}
+
 
 
 
 int main(){
 	Test t, r;
-	t.writeTextFile("Chey.txt");
+	//t.writeTextFile("Chey.txt");
 	//r.readTextFile("Chey.txt");
 	system("Pause");
 
