@@ -9,7 +9,8 @@ using namespace std;
 
 class Test{
 private:
-
+	int stuNum;
+	string name, sname, idNum;
 
 public:
 	Test();
@@ -17,6 +18,8 @@ public:
 	void Test::writeTextFile(string);
 	void Test::readTextFile(string);
 	void Test::rTextFile(string);
+	void Test::createRec(int l, int array[], string);
+	void Test::create(int l, string array[], string,string);
 
 };
 
@@ -63,12 +66,33 @@ void Test::readTextFile(string link){
 }
 
 
-class Rec{
 
-private:
-public:
+void Test::createRec(int l, int array[], string n){
+	cout << n << endl;
+	for (int i = 0; i < l; i++)
+	{
+		while (array[i]==NULL)
+		{
+			array[i] = stuNum;
+		}
+		
+	}
+}
 
-};
+void Test::create(int l, string array[], string n,string c ){
+	cout << n << endl;
+	for (int i = 0; i < l; i++)
+	{
+		while (array[i].compare(NULL)==0)
+		{
+			array[i] = c;
+
+		}
+
+	}
+}
+
+
 
 
 int main(){
