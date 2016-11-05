@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <ostream>
 #include <string>
 #include <cmath>
 using namespace std;
@@ -15,7 +16,7 @@ public:
 	~Test();
 	void Test::writeTextFile(string);
 	void Test::readTextFile(string);
-	void Test::rTextFile(string link);
+	void Test::rTextFile(string);
 
 };
 
@@ -83,8 +84,8 @@ void Test::rTextFile(string link){
 
 int main(){
 	Test t, r;
-	t.writeTextFile("vet.txt");
-	r.readTextFile("Chey.txt");
+	t.writeTextFile("Chey.txt");
+	//r.readTextFile("Chey.txt");
 
 
 
